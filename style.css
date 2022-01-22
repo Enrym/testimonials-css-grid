@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    height: 100%;
+    padding: 12%;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+}
+
+.grid {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 7px 17px 5px rgb(202, 196, 196);
+    
+}
+
+.grid-1 {
+    background: hsl(263, 55%, 52%);
+    grid-column: 1/3;
+    grid-row: 1/3;
+    position:relative;
+    z-index: -2;
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 30px;
+    z-index: -1;
+}
+
+.grid-2 {
+    background: hsl(217, 19%, 35%);
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.grid-3 {
+    background: #fff;
+    color: #000;
+    grid-column: 4/5;
+    grid-row: 1/5;
+}
+
+.grid-4 {
+    background: #fff;
+    color: #000;
+    grid-column: 1/2;
+    grid-row: 3/5;
+}
+
+.grid-5 {
+    background: hsl(219, 29%, 14%);
+    grid-column:2/4;
+    grid-row:3/5;
+}
+
+.author {
+    display:flex;
+    align-items: center;
+}
+
+.author img {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 30px;   
+}
+
+.author p:first-of-type {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.author p:last-of-type {
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.author-3 p:first-of-type, 
+.author-4 p:first-of-type {
+    opacity: 0.7;
+}
+
+.heading {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.heading-3, .heading-4 {
+    opacity: 0.7;
+}
+
+.text {
+    opacity: 0.7;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.attribution {
+    text-align: center;
+    padding-top: 50px;
+    color:hsl(263, 55%, 52%);
+}
+
+/* smaller screens */
+
+@media (max-width: 1023px) {
+    .grid {
+        grid-column: 1/5;
+    } 
+
+    .grid-1 {
+        grid-row: 1/3;
+    }
+
+    .grid-2 {
+        grid-row:3/5;
+    }
+
+    .grid-3 {
+        grid-row: span 8;
+    }
+
+    .grid-4 {
+        grid-row: 5/6;
+    }
+
+    .grid-5 {
+        grid-row: 6/8;
+    }
+}
+
+@media (max-width: 467px) {
+    body {
+        padding: 5%;
+    }
+}
